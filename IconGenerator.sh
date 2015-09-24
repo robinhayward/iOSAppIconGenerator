@@ -3,7 +3,7 @@
 # Path to source directory
 SOURCE_DIRECTORY=$(pwd)
 # Path to source directory
-SOURCE_OUTPUT_DIRECTORY=${SOURCE_DIRECTORY}/Output
+SOURCE_OUTPUT_DIRECTORY=${SOURCE_DIRECTORY}/Output/
 # Path to source image
 SOURCE_IMAGE_PATH=${SOURCE_DIRECTORY}/${1}
 
