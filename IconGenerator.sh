@@ -1,30 +1,38 @@
 #!/bin/bash
-f=$(pwd)
 
-# Delete any existing assets
+# Path to source directory
+SOURCE_DIRECTORY=$(pwd)
+# Path to source directory
+SOURCE_OUTPUT_DIRECTORY=${SOURCE_DIRECTORY}/Output/
+# Path to source image
+SOURCE_IMAGE_PATH=${SOURCE_DIRECTORY}/${1}
+
+# Delete the existing Output folder
 rm -rf Output
+
+# Recreate the Output folder
 mkdir Output
 
 # iTunes
-sips --resampleWidth 1024 "${f}/${1}" --out "${f}/Output/iTunesArtwork.png"
+sips --resampleWidth 1024 "${SOURCE_IMAGE_PATH}" --out "${SOURCE_OUTPUT_DIRECTORY}iTunesArtwork.png"
 
-# Spotlight
-sips --resampleWidth 58 "${f}/${1}" --out "${f}/Output/iPhoneSpotlight29@2x.png"
-sips --resampleWidth 87 "${f}/${1}" --out "${f}/Output/iPhoneSpotlight29@3x.png"
-sips --resampleWidth 80 "${f}/${1}" --out "${f}/Output/iPhoneSpotlight40@2x.png"
-sips --resampleWidth 120 "${f}/${1}" --out "${f}/Output/iPhoneSpotlight40@3x.png"
-sips --resampleWidth 40 "${f}/${1}" --out "${f}/Output/iPadSpotlight40.png"
-sips --resampleWidth 80 "${f}/${1}" --out "${f}/Output/iPadSpotlight40@2x.png"
+# App Icon
+sips --resampleWidth 120 "${SOURCE_IMAGE_PATH}" --out "${SOURCE_OUTPUT_DIRECTORY}iPhoneApp60@2x.png"
+sips --resampleWidth 180 "${SOURCE_IMAGE_PATH}" --out "${SOURCE_OUTPUT_DIRECTORY}iPhoneApp60@3x.png"
+sips --resampleWidth 76 "${SOURCE_IMAGE_PATH}" --out "${SOURCE_OUTPUT_DIRECTORY}iPadApp76.png"
+sips --resampleWidth 152 "${SOURCE_IMAGE_PATH}" --out "${SOURCE_OUTPUT_DIRECTORY}iPadApp76@2x.png"
 
-# App
-sips --resampleWidth 120 "${f}/${1}" --out "${f}/Output/iPhoneApp60@2x.png"
-sips --resampleWidth 180 "${f}/${1}" --out "${f}/Output/iPhoneApp60@3x.png"
-sips --resampleWidth 76 "${f}/${1}" --out "${f}/Output/iPadApp76.png"
-sips --resampleWidth 152 "${f}/${1}" --out "${f}/Output/iPadApp76@2x.png"
+# Spotlight Icon
+sips --resampleWidth 58 "${SOURCE_IMAGE_PATH}" --out "${SOURCE_OUTPUT_DIRECTORY}iPhoneSpotlight29@2x.png"
+sips --resampleWidth 87 "${SOURCE_IMAGE_PATH}" --out "${SOURCE_OUTPUT_DIRECTORY}iPhoneSpotlight29@3x.png"
+sips --resampleWidth 80 "${SOURCE_IMAGE_PATH}" --out "${SOURCE_OUTPUT_DIRECTORY}iPhoneSpotlight40@2x.png"
+sips --resampleWidth 120 "${SOURCE_IMAGE_PATH}" --out "${SOURCE_OUTPUT_DIRECTORY}iPhoneSpotlight40@3x.png"
+sips --resampleWidth 40 "${SOURCE_IMAGE_PATH}" --out "${SOURCE_OUTPUT_DIRECTORY}iPadSpotlight40.png"
+sips --resampleWidth 80 "${SOURCE_IMAGE_PATH}" --out "${SOURCE_OUTPUT_DIRECTORY}iPadSpotlight40@2x.png"
 
-# Settings
-sips --resampleWidth 29 "${f}/${1}" --out "${f}/Output/iPadSettings29.png"
-sips --resampleWidth 58 "${f}/${1}" --out "${f}/Output/iPadSettings29@2x.png"
+# Settings Icon
+sips --resampleWidth 29 "${SOURCE_IMAGE_PATH}" --out "${SOURCE_OUTPUT_DIRECTORY}iPadSettings29.png"
+sips --resampleWidth 58 "${SOURCE_IMAGE_PATH}" --out "${SOURCE_OUTPUT_DIRECTORY}iPadSettings29@2x.png"
 
-# Open the folder of created assets
+# Open the Output folder of created assets
 open ./Output/
