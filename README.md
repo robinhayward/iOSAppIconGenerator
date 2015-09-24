@@ -11,3 +11,7 @@ This script will generate all the images Xcode 7 currently requires of your app 
 #### Comments
 
 If there are any missing images just let me know and I will add them.
+
+##### Documentation
+
+[sips](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/sips.1.html) -- scriptable image processing system
