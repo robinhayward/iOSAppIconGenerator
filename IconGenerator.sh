@@ -21,8 +21,7 @@ sips --resampleWidth 120  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}iP
 sips --resampleWidth 180  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}iPhoneApp60@3x.png"
 sips --resampleWidth 76   $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}iPadApp76.png"
 sips --resampleWidth 152  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}iPadApp76@2x.png"
-sips --resampleWidth 76   $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}iPadApp83.5.png"
-sips --resampleWidth 83.5  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}iPadApp83.5@2x.png"
+sips --resampleWidth 167  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}iPadApp83.5@2x.png"
 
 # Spotlight Icon
 sips --resampleWidth 58   $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}iPhoneSpotlight29@2x.png"
