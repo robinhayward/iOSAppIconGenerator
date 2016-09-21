@@ -35,5 +35,17 @@ sips --resampleWidth 76   $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}iP
 sips --resampleWidth 152  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}iPadApp76@2x.png"
 sips --resampleWidth 167  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}iPadProApp83.5@2x.png"
 
+# MacOS
+sips --resampleWidth 16   $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}Mac16.png"
+sips --resampleWidth 32   $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}Mac16@2x.png"
+sips --resampleWidth 32   $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}Mac32.png"
+sips --resampleWidth 64   $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}Mac32@2x.png"
+sips --resampleWidth 128  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}Mac128.png"
+sips --resampleWidth 256  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}Mac128@2x.png"
+sips --resampleWidth 256  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}Mac256.png"
+sips --resampleWidth 512  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}Mac256@2x.png"
+sips --resampleWidth 512  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}Mac512.png"
+sips --resampleWidth 1024 $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}Mac512@2x.png"
+
 # Open the Output folder of created assets
 open ./Output/
