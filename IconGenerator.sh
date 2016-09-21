@@ -56,6 +56,5 @@ sips --resampleWidth 40   $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}Wa
 sips --resampleWidth 172  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}WatchShortLook38mm@2x.png"
 sips --resampleWidth 196  $SOURCE_IMAGE_PATH --out "${SOURCE_OUTPUT_DIRECTORY}WatchShortLook42mm@2x.png"
 
-
 # Open the Output folder of created assets
 open ./Output/
